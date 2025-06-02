@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio Mazari Lamine</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f4f4f4;
+      color: #333;
+    }
+.hero-intro {
+  background-color: rgba(255, 255, 255, 0.7); /* blanc semi-transparent */
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 10px;
+  color: #000;
+  font-weight: 500;
+}
+
+    nav {
+      background: #222;
+      color: white;
+      padding: 10px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    nav .logo a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.6em;
+      font-weight: bold;
+    }
+
+    nav .nav-links a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: white;
+      transition: color 0.3s;
+    }
+
+    nav .nav-links a:hover {
+      color: #04AA6D;
+    }
+
+    nav button {
+      background: #04AA6D;
+      color: white;
+      border: none;
+      padding: 8px 15px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background 0.3s;
+    }
+
+    nav button:hover {
+      background: #038f5e;
+    }
+
+    .hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: url('123az.png') no-repeat center center/cover;
+}
+
+
+   .hero h2 {
+  margin-bottom: 15px;
+  font-size: 2em;
+  
+}
+
+
+    .buttons button {
+      margin: 10px;
+      padding: 12px 25px;
+      border: none;
+      background: #04AA6D;
+      color: white;
+      cursor: pointer;
+      border-radius: 6px;
+      font-size: 1em;
+      transition: background 0.3s;
+    }
+
+    .buttons button:hover {
+      background: #037d52;
+    }
+
+    .contact {
+      padding: 40px 20px;
+      text-align: center;
+      background-color: #fff;
+    }
+
+    .contact p {
+      font-size: 1.1em;
+      margin-bottom: 20px;
+    }
+
+    .contact a {
+      display: inline-block;
+      margin: 0 10px;
+      font-size: 1.4em;
+      color: #333;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .contact a:hover {
+      color: #04AA6D;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    footer a {
+      color: #0ff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.5);
+    }
+
+    .modal-content {
+      background: white;
+      margin: 10% auto;
+      padding: 20px;
+      width: 90%;
+      max-width: 500px;
+      border-radius: 8px;
+      position: relative;
+    }
+
+    .close, .close-privacy {
+      position: absolute;
+      right: 15px;
+      top: 10px;
+      font-size: 20px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav>
+    <div class="logo"><a href="#">MyPortfolio</a></div>
+    <div class="nav-links">
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <div class="hero">
+    <h2>Electronic Student</h2>
+    <p class="hero-intro">
+  Bienvenue sur mon portfolio. N'hésitez pas à visiter mon site web : 
+  <a href="https://tasruyt.onrender.com/" target="_blank">tasruyt.onrender.com</a>
+</p>
+
+    <div class="buttons">
+      <button onclick="window.location.href='AboutMe.html'">En savoir plus</button>
+    </div>
+  </div>
+
+  <!-- CONTACT SECTION -->
+  <div class="contact">
+    <h3>Contact</h3>
+    <p>Retrouvez-moi facilement :</p>
+    <a href="https://www.linkedin.com/in/lamine-mazari" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:mazari.lamine.19@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+    <a href="https://www.youtube.com/@Mazari_19" target="_blank" title="YouTube"><i class="fab fa-youtube"></i></a>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <a href="#" id="openModalBtnFooter">Terms of Service</a>
+    <a href="#" id="openPrivacyModalBtnFooter">Privacy Policy</a>
+    <p>© 2025 Lamine Mazari.</p>
+  </footer>
+
+  <!-- MODAL: Terms -->
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Terms of Service</h2>
+      <p>1- Use of content is subject to intellectual property.<br>
+         2- No guarantee of accuracy.<br>
+         3- External links not under our control.<br>
+         4- Limited liability.<br>
+         5- Privacy respected.<br>
+         6- Subject to change at any time.</p>
+    </div>
+  </div>
+
+  <!-- MODAL: Privacy -->
+  <div id="privacyModal" class="modal">
+    <div class="modal-content">
+      <span class="close-privacy">&times;</span>
+      <h2>Privacy Policy</h2>
+      <p>1- Info collected via contact only.<br>
+         2- No tracking cookies.<br>
+         3- We don’t control other sites.<br>
+         4- This policy may change.<br>
+         5- Contact us for questions.</p>
+    </div>
+  </div>
+
+  <!-- SCRIPT POUR MODALES -->
+  <script>
+    const modal = document.getElementById("modal");
+    const privacyModal = document.getElementById("privacyModal");
+    const btnTerms = document.getElementById("openModalBtnFooter");
+    const btnPrivacy = document.getElementById("openPrivacyModalBtnFooter");
+    const spanClose = document.querySelector(".close");
+    const spanClosePrivacy = document.querySelector(".close-privacy");
+
+    btnTerms.onclick = () => modal.style.display = "block";
+    btnPrivacy.onclick = () => privacyModal.style.display = "block";
+    spanClose.onclick = () => modal.style.display = "none";
+    spanClosePrivacy.onclick = () => privacyModal.style.display = "none";
+
+    window.onclick = function(event) {
+      if (event.target == modal) modal.style.display = "none";
+      if (event.target == privacyModal) privacyModal.style.display = "none";
+    };
+  </script>
+
+</body>
+</html>
